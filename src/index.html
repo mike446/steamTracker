@@ -28,8 +28,19 @@
             <div class="content-box">Profile 4</div>
             <div class="content-box">Profile 5</div>
             <div class="content-box">Profile 6</div>
-            <div class="add-box">+</div>
+            <div class="add-box" id="addBox">+</div>
         </main>
     </div>
+    <script>
+            document.getElementById('addBox').addEventListener('click', function(){
+                var title = prompt('Enter the title for the new profile:');
+                if(title){
+                    var newBox = document.createElement('div');
+                    newBox.className = 'content-box';
+                    newBox.textContent = title;
+                    document.querySelector('main').insertBefore(newBox, this);
+                }
+            });
+    </script>
 </body>
 </html>
