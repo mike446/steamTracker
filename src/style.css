@@ -1,9 +1,13 @@
+/* Reset some default styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: rgb(27, 40, 56);
+    color: rgb(119, 179, 213);
 }
 
+/* Header styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -17,20 +21,49 @@ header .logo {
     font-size: 1.5em;
 }
 
+header nav {
+    display: flex;
+}
+
 header nav a {
     color: white;
     margin: 0 10px;
     text-decoration: none;
+    padding: 5px 10px;
 }
 
+header nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Account menu link */
 header .account-menu {
-    cursor: pointer;
+    color: white;
+    margin-left: auto;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #333;
+    border-radius: 5px;
 }
 
+/* Account menu link hover effect */
+header .account-menu:hover {
+    background-color: #555;
+}
+
+/* Prevent visited links from turning purple */
+header .account-menu:visited {
+    color: white;
+    background-color: #333;
+}
+
+/* Layout containers */
 .container {
     display: flex;
 }
 
+/* Sidebar */
 aside {
     width: 200px;
     background-color: #f4f4f4;
@@ -46,6 +79,7 @@ aside ul li {
     margin: 10px 0;
 }
 
+/* Main content area */
 main {
     flex: 1;
     padding: 20px;
@@ -54,6 +88,7 @@ main {
     gap: 10px;
 }
 
+/* Content boxes */
 .content-box, .add-box {
     background-color: #e0e0e0;
     padding: 20px;
@@ -66,4 +101,48 @@ main {
     background-color: #ccc;
     font-size: 2em;
     cursor: pointer;
+}
+
+/* Login form styling */
+form {
+    background-color: #e0e0e0;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+    color: #777;
+}
+
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
 }
